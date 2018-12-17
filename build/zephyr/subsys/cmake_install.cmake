@@ -34,13 +34,13 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/home/parallels/nucleo_l4r5zi_raingauge/test03b_uart/build/zephyr/subsys/debug/cmake_install.cmake")
-  include("/home/parallels/nucleo_l4r5zi_raingauge/test03b_uart/build/zephyr/subsys/logging/cmake_install.cmake")
-  include("/home/parallels/nucleo_l4r5zi_raingauge/test03b_uart/build/zephyr/subsys/fs/cmake_install.cmake")
-  include("/home/parallels/nucleo_l4r5zi_raingauge/test03b_uart/build/zephyr/subsys/random/cmake_install.cmake")
-  include("/home/parallels/nucleo_l4r5zi_raingauge/test03b_uart/build/zephyr/subsys/storage/cmake_install.cmake")
-  include("/home/parallels/nucleo_l4r5zi_raingauge/test03b_uart/build/zephyr/subsys/fb/cmake_install.cmake")
-  include("/home/parallels/nucleo_l4r5zi_raingauge/test03b_uart/build/zephyr/subsys/stats/cmake_install.cmake")
+  include("/home/parallels/nucleo_l4r5zi_raingauge/stm32_lte/build/zephyr/subsys/debug/cmake_install.cmake")
+  include("/home/parallels/nucleo_l4r5zi_raingauge/stm32_lte/build/zephyr/subsys/logging/cmake_install.cmake")
+  include("/home/parallels/nucleo_l4r5zi_raingauge/stm32_lte/build/zephyr/subsys/fs/cmake_install.cmake")
+  include("/home/parallels/nucleo_l4r5zi_raingauge/stm32_lte/build/zephyr/subsys/random/cmake_install.cmake")
+  include("/home/parallels/nucleo_l4r5zi_raingauge/stm32_lte/build/zephyr/subsys/storage/cmake_install.cmake")
+  include("/home/parallels/nucleo_l4r5zi_raingauge/stm32_lte/build/zephyr/subsys/fb/cmake_install.cmake")
+  include("/home/parallels/nucleo_l4r5zi_raingauge/stm32_lte/build/zephyr/subsys/stats/cmake_install.cmake")
 
 endif()
 

@@ -308,7 +308,7 @@ CONFIG_UART_INTERRUPT_DRIVEN=y
 # CONFIG_UART_NS16550 is not set
 # CONFIG_UART_STELLARIS is not set
 # CONFIG_UART_NSIM is not set
-CONFIG_UART_1=y
+# CONFIG_UART_1 is not set
 # CONFIG_UART_3 is not set
 # CONFIG_UART_4 is not set
 # CONFIG_UART_5 is not set

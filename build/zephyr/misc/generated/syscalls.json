@@ -344,7 +344,7 @@
     ],
     [
         [
-            "s32_t k_timer_remaining_get",
+            "u32_t k_timer_remaining_get",
             "struct k_timer *timer"
         ],
         "kernel.h"

@@ -11,7 +11,7 @@ The output was:
 
 Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "CMakeCCompilerId.o"
 
-The C compiler identification is GNU, found in "/home/parallels/nucleo_l4r5zi_raingauge/test03b_uart/build/CMakeFiles/3.10.2/CompilerIdC/CMakeCCompilerId.o"
+The C compiler identification is GNU, found in "/home/parallels/nucleo_l4r5zi_raingauge/stm32_lte/build/CMakeFiles/3.10.2/CompilerIdC/CMakeCCompilerId.o"
 
 Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
 Compiler: /opt/zephyr-sdk/sysroots/x86_64-pokysdk-linux/usr/bin/arm-zephyr-eabi/arm-zephyr-eabi-g++ 
@@ -24,14 +24,14 @@ The output was:
 
 Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "CMakeCXXCompilerId.o"
 
-The CXX compiler identification is GNU, found in "/home/parallels/nucleo_l4r5zi_raingauge/test03b_uart/build/CMakeFiles/3.10.2/CompilerIdCXX/CMakeCXXCompilerId.o"
+The CXX compiler identification is GNU, found in "/home/parallels/nucleo_l4r5zi_raingauge/stm32_lte/build/CMakeFiles/3.10.2/CompilerIdCXX/CMakeCXXCompilerId.o"
 
 Performing C SOURCE FILE Test toolchain_is_ok succeeded with the following output:
-Change Dir: /home/parallels/nucleo_l4r5zi_raingauge/test03b_uart/build/CMakeFiles/CMakeTmp
+Change Dir: /home/parallels/nucleo_l4r5zi_raingauge/stm32_lte/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/ninja" "cmTC_6a27b"
-[1/2] Building C object CMakeFiles/cmTC_6a27b.dir/src.c.obj
-[2/2] Linking C executable cmTC_6a27b
+Run Build Command:"/usr/bin/ninja" "cmTC_6e163"
+[1/2] Building C object CMakeFiles/cmTC_6e163.dir/src.c.obj
+[2/2] Linking C executable cmTC_6e163
 /opt/zephyr-sdk/sysroots/x86_64-pokysdk-linux/usr/libexec/arm-zephyr-eabi/gcc/arm-zephyr-eabi/6.2.0/real-ld: warning: cannot find entry symbol _start; defaulting to 0000000000008024
 
 Source file was:

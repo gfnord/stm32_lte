@@ -55,6 +55,9 @@ SECTIONS
  KEEP(*(.kinetis_flash_config))
  KEEP(*(".kinetis_flash_config.*"))
  _vector_end = .;
+ } > FLASH
+    _TEXT_SECTION_NAME_2 :
+ {
  _image_text_start = .;
  *(.text)
  *(".text.*")
@@ -71,7 +74,7 @@ SECTIONS
  _image_rodata_start = .;
  sw_isr_table () :
  {
-  *(.sw_isr_table)
+  *(.gnu.linkonce.sw_isr_table)
  } > FLASH
  devconfig () :
  {
@@ -129,6 +132,7 @@ SECTIONS
  *(.igot)
  }
    
+ . = 0x20000000;
  . = ALIGN(_region_min_align);
  _image_ram_start = .;
     bss (NOLOAD) : ALIGN_WITH_INPUT
@@ -347,4 +351,8 @@ SECTIONS
  KEEP(*(.ARM.attributes))
  KEEP(*(.gnu.attributes))
  }
+.last_section (NOLOAD) :
+{
+} > FLASH
+_flash_used = LOADADDR(.last_section) - _image_rom_start;
     }

@@ -34,10 +34,10 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/home/parallels/nucleo_l4r5zi_raingauge/test03b_uart/build/zephyr/ext/lib/crypto/cmake_install.cmake")
-  include("/home/parallels/nucleo_l4r5zi_raingauge/test03b_uart/build/zephyr/ext/lib/encoding/cmake_install.cmake")
-  include("/home/parallels/nucleo_l4r5zi_raingauge/test03b_uart/build/zephyr/ext/lib/ipc/cmake_install.cmake")
-  include("/home/parallels/nucleo_l4r5zi_raingauge/test03b_uart/build/zephyr/ext/lib/mgmt/cmake_install.cmake")
+  include("/home/parallels/nucleo_l4r5zi_raingauge/stm32_lte/build/zephyr/ext/lib/crypto/cmake_install.cmake")
+  include("/home/parallels/nucleo_l4r5zi_raingauge/stm32_lte/build/zephyr/ext/lib/encoding/cmake_install.cmake")
+  include("/home/parallels/nucleo_l4r5zi_raingauge/stm32_lte/build/zephyr/ext/lib/ipc/cmake_install.cmake")
+  include("/home/parallels/nucleo_l4r5zi_raingauge/stm32_lte/build/zephyr/ext/lib/mgmt/cmake_install.cmake")
 
 endif()
 

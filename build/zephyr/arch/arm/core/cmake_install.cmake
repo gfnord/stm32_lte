@@ -34,8 +34,8 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/home/parallels/nucleo_l4r5zi_raingauge/test03b_uart/build/zephyr/arch/arm/core/cortex_m/cmake_install.cmake")
-  include("/home/parallels/nucleo_l4r5zi_raingauge/test03b_uart/build/zephyr/arch/arm/core/cortex_m/mpu/cmake_install.cmake")
+  include("/home/parallels/nucleo_l4r5zi_raingauge/stm32_lte/build/zephyr/arch/arm/core/cortex_m/cmake_install.cmake")
+  include("/home/parallels/nucleo_l4r5zi_raingauge/stm32_lte/build/zephyr/arch/arm/core/cortex_m/mpu/cmake_install.cmake")
 
 endif()
 

@@ -260,17 +260,6 @@
 			pinctrl-names = "default";
 		};
 
-		arduino_serial: usart3: serial@40004800 {
-			compatible = "st,stm32-usart", "st,stm32-uart";
-			reg = <0x40004800 0x400>;
-			clocks = <0x02 0x02 0x40000>;
-			interrupts = <0x27 0x00>;
-			status = "ok";
-			label = "UART_3";
-			current-speed = <0x1c200>;
-			pinctrl-names = "default";
-		};
-
 		lpuart1: serial@40008000 {
 			compatible = "st,stm32-lpuart", "st,stm32-uart";
 			reg = <0x40008000 0x400>;
@@ -315,17 +304,6 @@
 			clocks = <0x02 0x03 0x1000>;
 			status = "ok";
 			label = "SPI_1";
-		};
-
-		spi2: spi@40003800 {
-			compatible = "st,stm32-spi-fifo";
-			#address-cells = <0x01>;
-			#size-cells = <0x00>;
-			reg = <0x40003800 0x400>;
-			clocks = <0x02 0x02 0x4000>;
-			interrupts = <0x24 0x05>;
-			status = "disabled";
-			label = "SPI_2";
 		};
 
 		timers1: timers@40012c00 {
@@ -449,6 +427,17 @@
 			label = "RTC_0";
 		};
 
+		arduino_serial: usart3: serial@40004800 {
+			compatible = "st,stm32-usart", "st,stm32-uart";
+			reg = <0x40004800 0x400>;
+			clocks = <0x02 0x02 0x40000>;
+			interrupts = <0x27 0x00>;
+			status = "ok";
+			label = "UART_3";
+			current-speed = <0x1c200>;
+			pinctrl-names = "default";
+		};
+
 		uart4: serial@40004c00 {
 			compatible = "st,stm32-uart";
 			reg = <0x40004c00 0x400>;
@@ -480,6 +469,17 @@
 			label = "I2C_4";
 		};
 
+		spi2: spi@40003800 {
+			compatible = "st,stm32-spi-fifo";
+			#address-cells = <0x01>;
+			#size-cells = <0x00>;
+			reg = <0x40003800 0x400>;
+			clocks = <0x02 0x02 0x4000>;
+			interrupts = <0x24 0x05>;
+			status = "disabled";
+			label = "SPI_2";
+		};
+
 		spi3: spi@40003c00 {
 			compatible = "st,stm32-spi-fifo";
 			#address-cells = <0x01>;
@@ -488,13 +488,6 @@
 			interrupts = <0x33 0x05>;
 			status = "disabled";
 			label = "SPI_3";
-		};
-
-		otgfs_phy: otgfs_phy {
-			compatible = "usb-nop-xceiv";
-			#phy-cells = <0x00>;
-			label = "OTGFS_PHY";
-			phandle = <0x05>;
 		};
 
 		usbotg_fs: otgfs@50000000 {
@@ -513,6 +506,7 @@
 
 	chosen {
 		zephyr,console = "/soc/serial@40004400";
+		zephyr,shell-uart = "/soc/serial@40004400";
 		zephyr,sram = "/memory@20000000";
 		zephyr,flash = "/soc/flash-controller@40022000/flash@8000000";
 	};
@@ -539,6 +533,13 @@
 		device_type = "memory";
 		compatible = "mmio-sram";
 		reg = <0x20000000 0xa0000>;
+	};
+
+	otgfs_phy: otgfs_phy {
+		compatible = "usb-nop-xceiv";
+		#phy-cells = <0x00>;
+		label = "OTGFS_PHY";
+		phandle = <0x05>;
 	};
 
 	leds {

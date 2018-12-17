@@ -34,14 +34,14 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/home/parallels/nucleo_l4r5zi_raingauge/test03b_uart/build/zephyr/drivers/console/cmake_install.cmake")
-  include("/home/parallels/nucleo_l4r5zi_raingauge/test03b_uart/build/zephyr/drivers/interrupt_controller/cmake_install.cmake")
-  include("/home/parallels/nucleo_l4r5zi_raingauge/test03b_uart/build/zephyr/drivers/clock_control/cmake_install.cmake")
-  include("/home/parallels/nucleo_l4r5zi_raingauge/test03b_uart/build/zephyr/drivers/gpio/cmake_install.cmake")
-  include("/home/parallels/nucleo_l4r5zi_raingauge/test03b_uart/build/zephyr/drivers/pinmux/cmake_install.cmake")
-  include("/home/parallels/nucleo_l4r5zi_raingauge/test03b_uart/build/zephyr/drivers/rtc/cmake_install.cmake")
-  include("/home/parallels/nucleo_l4r5zi_raingauge/test03b_uart/build/zephyr/drivers/serial/cmake_install.cmake")
-  include("/home/parallels/nucleo_l4r5zi_raingauge/test03b_uart/build/zephyr/drivers/timer/cmake_install.cmake")
+  include("/home/parallels/nucleo_l4r5zi_raingauge/stm32_lte/build/zephyr/drivers/console/cmake_install.cmake")
+  include("/home/parallels/nucleo_l4r5zi_raingauge/stm32_lte/build/zephyr/drivers/interrupt_controller/cmake_install.cmake")
+  include("/home/parallels/nucleo_l4r5zi_raingauge/stm32_lte/build/zephyr/drivers/clock_control/cmake_install.cmake")
+  include("/home/parallels/nucleo_l4r5zi_raingauge/stm32_lte/build/zephyr/drivers/gpio/cmake_install.cmake")
+  include("/home/parallels/nucleo_l4r5zi_raingauge/stm32_lte/build/zephyr/drivers/pinmux/cmake_install.cmake")
+  include("/home/parallels/nucleo_l4r5zi_raingauge/stm32_lte/build/zephyr/drivers/rtc/cmake_install.cmake")
+  include("/home/parallels/nucleo_l4r5zi_raingauge/stm32_lte/build/zephyr/drivers/serial/cmake_install.cmake")
+  include("/home/parallels/nucleo_l4r5zi_raingauge/stm32_lte/build/zephyr/drivers/timer/cmake_install.cmake")
 
 endif()
 

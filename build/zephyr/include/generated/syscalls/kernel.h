@@ -60,7 +60,7 @@ K_SYSCALL_DECLARE1(K_SYSCALL_K_TIMER_STATUS_GET, k_timer_status_get, u32_t, stru
 
 K_SYSCALL_DECLARE1(K_SYSCALL_K_TIMER_STATUS_SYNC, k_timer_status_sync, u32_t, struct k_timer *, timer)
 
-K_SYSCALL_DECLARE1(K_SYSCALL_K_TIMER_REMAINING_GET, k_timer_remaining_get, s32_t, struct k_timer *, timer)
+K_SYSCALL_DECLARE1(K_SYSCALL_K_TIMER_REMAINING_GET, k_timer_remaining_get, u32_t, struct k_timer *, timer)
 
 K_SYSCALL_DECLARE2_VOID(K_SYSCALL_K_TIMER_USER_DATA_SET, k_timer_user_data_set, struct k_timer *, timer, void *, user_data)
 

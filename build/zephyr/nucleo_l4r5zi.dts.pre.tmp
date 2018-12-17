@@ -187,14 +187,6 @@
    status = "disabled";
    label = "UART_2";
   };
-  usart3: serial@40004800 {
-   compatible = "st,stm32-usart", "st,stm32-uart";
-   reg = <0x40004800 0x400>;
-   clocks = <&rcc 2 0x00040000>;
-   interrupts = <39 0>;
-   status = "disabled";
-   label = "UART_3";
-  };
   lpuart1: serial@40008000 {
    compatible = "st,stm32-lpuart", "st,stm32-uart";
    reg = <0x40008000 0x400>;
@@ -236,16 +228,6 @@
    clocks = <&rcc 3 0x00001000>;
    status = "disabled";
    label = "SPI_1";
-  };
-  spi2: spi@40003800 {
-   compatible = "st,stm32-spi-fifo";
-   #address-cells = <1>;
-   #size-cells = <0>;
-   reg = <0x40003800 0x400>;
-   clocks = <&rcc 2 0x00004000>;
-   interrupts = <36 5>;
-   status = "disabled";
-   label = "SPI_2";
   };
   timers1: timers@40012c00 {
    compatible = "st,stm32-timers";
@@ -403,6 +385,14 @@
     label = "GPIOG";
    };
   };
+  usart3: serial@40004800 {
+   compatible = "st,stm32-usart", "st,stm32-uart";
+   reg = <0x40004800 0x400>;
+   clocks = <&rcc 2 0x00040000>;
+   interrupts = <39 0>;
+   status = "disabled";
+   label = "UART_3";
+  };
   uart4: serial@40004c00 {
    compatible = "st,stm32-uart";
    reg = <0x40004c00 0x400>;
@@ -431,6 +421,16 @@
    status = "disabled";
    label= "I2C_4";
   };
+  spi2: spi@40003800 {
+   compatible = "st,stm32-spi-fifo";
+   #address-cells = <1>;
+   #size-cells = <0>;
+   reg = <0x40003800 0x400>;
+   clocks = <&rcc 2 0x00004000>;
+   interrupts = <36 5>;
+   status = "disabled";
+   label = "SPI_2";
+  };
   spi3: spi@40003c00 {
    compatible = "st,stm32-spi-fifo";
    #address-cells = <1>;
@@ -439,11 +439,6 @@
    interrupts = <51 5>;
    status = "disabled";
    label = "SPI_3";
-  };
-  otgfs_phy: otgfs_phy {
-   compatible = "usb-nop-xceiv";
-   #phy-cells = <0>;
-   label = "OTGFS_PHY";
   };
   usbotg_fs: otgfs@50000000 {
    compatible = "st,stm32-otgfs";
@@ -457,6 +452,11 @@
    status = "disabled";
    label= "OTGFS";
   };
+ };
+ otgfs_phy: otgfs_phy {
+  compatible = "usb-nop-xceiv";
+  #phy-cells = <0>;
+  label = "OTGFS_PHY";
  };
 };
 / {
@@ -473,6 +473,7 @@
  compatible = "st,stm32l4r5zi-nucleo", "st,stm32l4r5";
  chosen {
   zephyr,console = &usart2;
+  zephyr,shell-uart = &usart2;
   zephyr,sram = &sram0;
   zephyr,flash = &flash0;
  };

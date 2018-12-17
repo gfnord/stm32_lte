@@ -50,8 +50,8 @@ u8_t ay_uart_driver_open()
     /* Enable Tx/Rx interrupt before using fifo */
     /* Verify uart_irq_rx_enable() */
     uart_irq_rx_enable(modem_dev);
-    SYS_LOG_INF("UART device loaded...[OK]");
-    printk("UART device loaded...[OK]\n");
+    SYS_LOG_INF("UART device loaded.");
+    printk("UART device loaded.\n");
     return 0;
 }
 
@@ -73,10 +73,12 @@ void ay_uart_driver_write(char *data)
 
 void main(void)
 {
+    printk("stm32_lte project\n");
     u8_t status;
     status = ay_uart_driver_open();
     if (status == 0) {
-        printk("Sending AT to UART\n");
-        ay_uart_driver_write("\r\nAT\r\n\r\n");
+        printk("Sending AT to UART...\n");
+        ay_uart_driver_write("AT\r\n\r\n");
+	printk("\n");
     }
 }
