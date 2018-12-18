@@ -71,17 +71,15 @@ void consumer_modem_queue(void)
 	u8_t number_of_messages;
 	u8_t i;
 	u8_t full_message[512];
-	strcpy(full_message, "");
 	number_of_messages = k_msgq_num_used_get(&modem_queue);
 	if (number_of_messages > 0) {
 		printk("%d - Consuming %d items from queue.\n", k_uptime_get_32(), number_of_messages);
-		for ( i = 1; i <= number_of_messages; i++) {
-       			/* get a data item */
+		for ( i = 0; i < number_of_messages; i++) {
        			k_msgq_get(&modem_queue, &recv_data, K_FOREVER);
-       			/* process data item */
-			//printk("  - Item %d from queue: %c\n", i, data.response);
-			strcat(full_message, recv_data);
+			//printk("  - Item %d from queue: %c\n", i, recv_data);
+			full_message[i] = recv_data;
 		}
+		full_message[number_of_messages] = '\0';
 		printk("%s\n", full_message);
 	} else {
 		printk("%d - Queue empty.\n", k_uptime_get_32());
