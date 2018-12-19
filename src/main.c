@@ -95,11 +95,14 @@ void main(void)
         printk("Sending AT to UART...\n");
         ay_uart_driver_write("AT\r\n\r\n");
 	printk("\n");
-    }
-    while(1) {
-    // Read the modem queue
-    consumer_modem_queue();
-    k_sleep(10000);
+    	while(1) {
+    		printk("Sending AT to UART...\n");
+    		ay_uart_driver_write("AT\r\n\r\n");
+    		printk("\n");
+    		// Read the modem queue
+    		consumer_modem_queue();
+    		k_sleep(10000);
+        }
     }
 
 }
